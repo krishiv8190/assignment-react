@@ -68,7 +68,7 @@ export default function Form({ onRegistration }) {
                     name="name"
                     value={formValues.name}
                     onChange={formChangeHandler}
-                    additionalClasses="m-6"
+                    additionalClasses="m-3"
                 />
                 <Input
                     id="email"
@@ -80,7 +80,7 @@ export default function Form({ onRegistration }) {
                     isError={error.email}
                 />
                 {error.email && (
-                    <div className="text-[#FF0808] mt-3 mr-32 text-base font-medium flex justify-start items-center gap-1 pl-4 font-manrope">
+                    <div className="text-[#FF0808] -mb-4 mt-3 mr-32 text-base font-medium flex justify-start items-center gap-1 pl-4 font-manrope">
                         <img
                             src={Caution}
                             alt="caution"
@@ -90,7 +90,7 @@ export default function Form({ onRegistration }) {
                     </div>
                 )}
                 {formValues.name && formValues.email ? (
-                    <Button type="submit" styleName="form-true " formnovalidate>
+                    <Button type="submit" styleName="form-true" formnovalidate>
                         Submit
                     </Button>
                 ) : (

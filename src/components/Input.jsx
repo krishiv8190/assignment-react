@@ -12,7 +12,7 @@ export default function Input({
             className={`space-y-1 w-full flex items-center justify-center ${additionalClasses}`}
         >
             <input
-                className="px-9 py-6 bg-[#EFEFEF] rounded-full w-7/12 max-w-lg placeholder:font-manrope placeholder:font-medium placeholder:text-xl placeholder:text-[#827A7A]"
+                className="px-9 py-6 text-xl bg-[#EFEFEF] rounded-full w-7/12 max-w-lg placeholder:font-manrope placeholder:font-medium placeholder:text-xl placeholder:text-[#827A7A] focus:bg-[#EFEFEF]"
                 id={id}
                 {...props}
             />

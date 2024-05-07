@@ -10,7 +10,6 @@ export default function Register() {
     const [redirectTimer, setRedirectTimer] = useState(5);
     const navigateTo = useNavigate();
 
-
     useEffect(() => {
         if (registrationSuccess) {
             const timer = setTimeout(() => {
@@ -18,7 +17,7 @@ export default function Register() {
             }, 1000);
 
             if (redirectTimer === 0) {
-                navigateTo.push("/");
+                navigateTo("/");
             }
 
             return () => clearTimeout(timer);
