@@ -6,27 +6,27 @@ import Navbar from "./components/Navbar";
 import Register from "./components/Register";
 
 function App() {
-    return (
-        <div className="m-8">
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/register" element={<Register />} />
-                </Routes>
-            </BrowserRouter>
-        </div>
-    );
+  return (
+    <div className="m-8">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/register" element={<Register />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
 }
 
 function HomePage() {
-    return (
-        <>
-            <Navbar />
-            <Hero />
-            <FAQs />
-            <Footer />
-        </>
-    );
+  return (
+    <>
+      <Navbar />
+      <Hero />
+      <FAQs />
+      <Footer />
+    </>
+  );
 }
 
 export default App;
