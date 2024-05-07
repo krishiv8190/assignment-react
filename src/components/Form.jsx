@@ -81,7 +81,7 @@ export default function Form({ onRegistration }) {
                 />
                 {error.email && (
                     <div className="flex justify-center items-center w-full h-full">
-                        <div className="text-[#FF0808] w-1/2 max-w-lg text-base font-medium flex justify-start items-center gap-1 pl-4 font-manrope">
+                        <div className="text-[#FF0808] -mb-5 w-1/2 max-w-lg text-base font-medium flex justify-start items-center gap-1 pl-4 font-manrope">
                             <img
                                 src={Caution}
                                 alt="caution"
