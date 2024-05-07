@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
     return (
         <div className="flex justify-center">
-            <nav className="rounded-full p-5 border border-gray-300 flex justify-between items-center w-11/12">
+            <nav className="rounded-full py-4 px-5 border border-gray-300 flex justify-between items-center w-11/12">
                 <div>
                     <img src={Logo} alt="brand" className="h-10" />
                 </div>
