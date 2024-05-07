@@ -10,7 +10,7 @@ export default function Navbar() {
                     <img src={Logo} alt="brand" className="h-10" />
                 </div>
                 <div className="space-x-5">
-                    <Link to="/registration">
+                    <Link to="/register">
                         <Button styleName="secondary">Get Projects</Button>
                     </Link>
                     <Button styleName="primary">Onboard Talent</Button>
