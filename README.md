@@ -22,7 +22,7 @@ Clone the project
   cd assignment-react
 ```
 
-2. Install dependencies in client directory
+2. Install dependencies in the same directory
 
 ```bash
   npm install
