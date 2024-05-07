@@ -2,6 +2,7 @@ import { useState } from "react";
 import Input from "./Input";
 import Button from "./Button";
 import PropTypes from "prop-types";
+import Caution from "../assets/caution.svg";
 
 export default function Form({ onRegistration }) {
     const [formValues, setFormValues] = useState({
@@ -15,7 +16,7 @@ export default function Form({ onRegistration }) {
     });
 
     const isValidEmail = (email) => {
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        return email.trim() === "" || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     };
 
     const formChangeHandler = (event) => {
@@ -52,12 +53,13 @@ export default function Form({ onRegistration }) {
                     Registration Form
                 </h2>
                 <p className="text-center font-semibold text-6xl font-manrope">
-                    Start your success <br></br> Journey here!
+                    Start your success <br /> Journey here!
                 </p>
             </div>
             <form
                 onSubmit={registrationSubmitHandler}
                 className="flex flex-col gap-4 mt-8 w-1/2 items-center"
+                noValidate
             >
                 <Input
                     id="name"
@@ -72,18 +74,27 @@ export default function Form({ onRegistration }) {
                     id="email"
                     type="email"
                     placeholder="Enter your email"
-                    error="Enter a valid email address"
                     name="email"
                     value={formValues.email}
                     onChange={formChangeHandler}
                     isError={error.email}
                 />
+                {error.email && (
+                    <div className="text-[#FF0808] mt-3 mr-32 text-base font-medium flex justify-start items-center gap-1 pl-4 font-manrope">
+                        <img
+                            src={Caution}
+                            alt="caution"
+                            className="w-5 h-5 mr-1 justify-center items-center flex"
+                        />
+                        Please enter a valid email address
+                    </div>
+                )}
                 {formValues.name && formValues.email ? (
-                    <Button type="submit" styleName="form-true">
+                    <Button type="submit" styleName="form-true " formnovalidate>
                         Submit
                     </Button>
                 ) : (
-                    <Button type="button" styleName="form-false">
+                    <Button type="button" styleName="form-false" formnovalidate>
                         Submit
                     </Button>
                 )}

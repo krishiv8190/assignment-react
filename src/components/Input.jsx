@@ -1,4 +1,3 @@
-import { MdErrorOutline } from "react-icons/md";
 import PropTypes from "prop-types";
 
 export default function Input({
@@ -18,10 +17,9 @@ export default function Input({
                 {...props}
             />
             {isError && (
-                <span className="text-[#FF0808] text-sm flex items-center gap-1 pl-4">
-                    <MdErrorOutline size={18} className="text-[#FF0808]" />
-                    {error}
-                </span>
+                <div className="relative mt-1 text-[#FF0808] text-xl flex items-center gap-1">
+                    <div>{error}</div>
+                </div>
             )}
         </div>
     );
